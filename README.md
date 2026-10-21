@@ -1,6 +1,6 @@
-# Start to Scale Plugin Marketplace
+# ScaleUp Financial Management Plugin Marketplace
 
-Public marketplace for Start to Scale Claude Code plugins.
+Public marketplace for ScaleUp Financial Management Claude Code plugins.
 
 ## Prerequisites
 
@@ -13,23 +13,23 @@ Public marketplace for Start to Scale Claude Code plugins.
 ### Option A: From the Cowork Desktop UI
 
 1. Open **Customize** → **Browse plugins** → **Personal** tab
-2. Click the `+` to add a marketplace → enter `stromy-org/starttoscale-marketplace`
-3. Click **Start to Scale** → Install
+2. Click the `+` to add a marketplace → enter `stromy-org/scaleupfm-marketplace`
+3. Click **ScaleUp Financial Management** → Install
 
 ### Option B: From the CLI
 
 ```bash
 # Add marketplace (one-time)
-claude plugin marketplace add stromy-org/starttoscale-marketplace
+claude plugin marketplace add stromy-org/scaleupfm-marketplace
 
 # Install plugin
-claude plugin install starttoscale-plugin@starttoscale-marketplace
+claude plugin install scaleupfm@scaleupfm-marketplace
 ```
 
 ### Post-install: dependencies (one-time)
 
 ```bash
-cd ~/.claude/plugins/cache/starttoscale-marketplace/starttoscale-plugin/0.1.0
+cd ~/.claude/plugins/cache/scaleupfm-marketplace/scaleupfm/0.5.1
 npm install   # if the plugin has Node dependencies
 uv sync       # if the plugin has Python dependencies
 ```
@@ -47,12 +47,12 @@ uv sync       # if the plugin has Python dependencies
 <!-- Update this table after adding skills to the plugin -->
 | Skill | Command |
 |-------|---------|
-| _example_ | `/starttoscale-plugin:example` |
+| _example_ | `/scaleupfm:example` |
 
 ## Updating
 
 ```bash
-claude plugin update starttoscale-plugin@starttoscale-marketplace
+claude plugin update scaleupfm@scaleupfm-marketplace
 ```
 
 ## Troubleshooting
@@ -63,11 +63,11 @@ claude plugin update starttoscale-plugin@starttoscale-marketplace
 | Other "Failed to install plugin" errors | Check `~/Library/Logs/Claude/main.log`; then try CLI install (Option B) |
 | Skills don't appear | Start a new session; ensure you're in the **Code** tab |
 | Dependency errors on first use | Run `npm install && uv sync` in the plugin cache dir |
-| "Plugin not found in marketplace" | Run `claude plugin marketplace add stromy-org/starttoscale-marketplace` first |
+| "Plugin not found in marketplace" | Run `claude plugin marketplace add stromy-org/scaleupfm-marketplace` first |
 
 ## Architecture
 
 - **Marketplace** (this repo): public — hosts `marketplace.json` only
-- **Plugin** (`starttoscale-plugin`): public — contains skills, brand data, company info
-- **Source format**: use `"source": "url"` with an explicit HTTPS clone URL ending in `.git`, for example `https://github.com/stromy-org/starttoscale-plugin.git`
+- **Plugin** (`scaleupfm-plugin`): public — contains skills, brand data, company info
+- **Source format**: use `"source": "url"` with an explicit HTTPS clone URL ending in `.git`, for example `https://github.com/stromy-org/scaleupfm-plugin.git`
 - **Why not `github` shorthand?** Anthropic supports it, but Claude Code can resolve it to SSH (`git@github.com:...`) and fail on machines without a configured GitHub SSH key. Explicit HTTPS is the org portability standard.

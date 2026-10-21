@@ -1,21 +1,21 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "starttoscale-marketplace",
-  "description": "Plugin marketplace for Start to Scale Claude Code plugins",
+  "name": "scaleupfm-marketplace",
+  "description": "Plugin marketplace for ScaleUp Financial Management Claude Code plugins",
   "owner": {
     "name": "stromy-org"
   },
   "plugins": [
     {
-      "name": "starttoscale",
-      "description": "Claude Code plugin for Start to Scale branded deliverables — stromy-format rendering + markdown-canvas deliverable planning + asset-editor + feedback",
-      "version": "0.4.22",
+      "name": "scaleupfm",
+      "description": "Claude Code plugin for ScaleUp Financial Management branded deliverables: stromy-format rendering, asset-editor and feedback",
+      "version": "0.5.1",
       "author": {
         "name": "William Masquelier"
       },
       "source": {
         "source": "url",
-        "url": "https://github.com/stromy-org/starttoscale-plugin.git"
+        "url": "https://github.com/stromy-org/scaleupfm-plugin.git"
       }
     }
   ]
