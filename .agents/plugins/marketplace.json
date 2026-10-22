@@ -1,0 +1,19 @@
+{
+  "name": "scaleupfm-marketplace",
+  "interface": {
+    "displayName": "ScaleUp Financial Management"
+  },
+  "plugins": [
+    {
+      "name": "scaleupfm",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/stromy-org/scaleupfm-plugin.git"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      }
+    }
+  ]
+}
