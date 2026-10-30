@@ -9,7 +9,7 @@
     {
       "name": "scaleupfm",
       "description": "Claude Code plugin for ScaleUp Financial Management branded deliverables: stromy-format rendering, asset-editor and feedback",
-      "version": "0.5.11",
+      "version": "0.5.12",
       "author": {
         "name": "William Masquelier"
       },
